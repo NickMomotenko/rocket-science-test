@@ -1,0 +1,15 @@
+.button {
+  font-size: 15px;
+  color: #000;
+
+  border: 2px solid #ff4641;
+  padding: 10px 23px;
+  border-radius: 2px;
+
+  font-family: "KievitPro-Medium", serif;
+  transition: 0.4s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,22 @@
+.rating {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 3px;
+
+    &.active {
+      svg {
+        path {
+          fill: rgba(245, 166, 35, 1);
+        }
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

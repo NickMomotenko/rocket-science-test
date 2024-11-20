@@ -1,0 +1,46 @@
+.reviews {
+  background-color: #fff;
+  padding: 35px 29px 33px 31px;
+
+  margin-bottom: 50px;
+
+  &__title {
+    margin-bottom: 22px;
+  }
+
+  &__content {
+    overflow: hidden;
+
+    &-list {
+      position: relative;
+      margin-bottom: 32px;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: -30px;
+        top: 0;
+        height: 100%;
+        width: 30px;
+
+        box-shadow: -10px 0 10px #00000017;
+      }
+    }
+
+    .reviews-card {
+      margin-right: 20px;
+      min-width: 300px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

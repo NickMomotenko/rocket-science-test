@@ -1,0 +1,14 @@
+.avatar {
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

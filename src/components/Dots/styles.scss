@@ -1,0 +1,39 @@
+.dots {
+  margin: 0 4px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 14px;
+    line-height: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      .dots__btn {
+        transform: scale(2);
+        background: red;
+      }
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: #000;
+
+    transition: 0.4s;
+
+    &:hover {
+      background-color: red;
+      transform: scale(2);
+    }
+  }
+}

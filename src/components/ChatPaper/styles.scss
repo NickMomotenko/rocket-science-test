@@ -1,0 +1,80 @@
+.chat {
+  background-color: #fff;
+  height: 700px;
+  width: 415px;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 27px 19px 27px 27px;
+    border-bottom: 1px solid #ecede9;
+  }
+
+  &__user {
+    &-avatar {
+      margin-right: 19px;
+    }
+
+    &-fullname {
+      font-family: "KievitPro-Bold", serif;
+      font-size: 18px;
+    }
+
+    &-job {
+      color: #ff4641;
+      font-size: 13px;
+
+      display: inline-flex;
+
+      &-icon {
+        margin-right: 3px;
+      }
+    }
+
+    &-rating {
+      margin-left: auto;
+    }
+  }
+
+  &__body {
+    flex: 1;
+    padding: 14px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #ff4641;
+      border-radius: 5px;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 19px 28px 26px;
+
+    &-input {
+      flex: 1;
+      margin-right: 15px;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    &-avatar {
+      margin-right: 19px;
+    }
+  }
+}

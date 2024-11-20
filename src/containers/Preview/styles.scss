@@ -1,0 +1,53 @@
+.preview {
+  background-color: #fff;
+  display: flex;
+
+  margin-bottom: 20px;
+
+  &__img {
+    width: 440px;
+    flex-shrink: 0;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-family: "KievitPro-Bold", serif;
+    margin-bottom: 18px;
+  }
+
+  &__content {
+    padding: 104px 34px 0 29px;
+  }
+
+  &__info {
+    font-family: "KievitPro-Light", serif;
+    font-size: 17px;
+    line-height: 25px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 177px;
+
+    margin-bottom: 3px;
+  }
+
+  &__btn {
+    .button {
+      padding: 0;
+      border-color: transparent;
+      border-bottom-color: #ff4641;
+      font-family: "KievitPro-Regular", serif;
+      font-size: 17px;
+      border-right-width: 0;
+      border-left-width: 0;
+    }
+  }
+}

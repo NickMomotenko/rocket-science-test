@@ -1,0 +1,32 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+
+  transition: 0.4s;
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__content {
+    background-color: #fff;
+    width: 50%;
+    height: 50%;
+
+    max-width: 580px;
+    max-height: 480px;
+
+    border-radius: 25px;
+    overflow: hidden;
+  }
+}
