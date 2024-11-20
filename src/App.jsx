@@ -1,11 +1,13 @@
+import { useContext, useEffect, useRef } from "react";
+
 import { Container } from "./components/Container";
+import { Popup } from "./components/Popup";
+
 import { Reviews } from "./containers/Reviews";
 import { Preview } from "./containers/Preview";
-import { Popup } from "./components/Popup";
-import { usePopup } from "./hooks/usePopup";
-import { useContext, useEffect, useRef } from "react";
-import { PopupContext } from "./context/PopupContext";
 import { Chats } from "./containers/Chats";
+
+import { PopupContext } from "./context/PopupContext";
 
 function App() {
   const popup = useContext(PopupContext);

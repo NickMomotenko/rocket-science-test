@@ -2,8 +2,9 @@ import React, { useContext, useRef } from "react";
 
 import { useClickOutside } from "../../hooks/useClickOutside";
 
-import "./styles.scss";
 import { PopupContext } from "../../context/PopupContext";
+
+import "./styles.scss";
 
 export const Popup = ({ active }) => {
   let classes = active ? "popup popup--active" : "popup";
@@ -16,7 +17,9 @@ export const Popup = ({ active }) => {
 
   return (
     <div className={classes}>
-      <div className="popup__content" ref={popupContentRef}>{popupContext.content}</div>
+      <div className="popup__content" ref={popupContentRef}>
+        {popupContext.content}
+      </div>
     </div>
   );
 };

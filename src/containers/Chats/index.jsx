@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
+
 import { ChatPaper } from "../../components/ChatPaper";
 
-import "./styles.scss";
 import { ChatsContext } from "../../context/ChatContext";
+
+import "./styles.scss";
 
 export const Chats = () => {
   const { chats, addMessage } = useContext(ChatsContext);

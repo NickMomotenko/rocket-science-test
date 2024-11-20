@@ -1,14 +1,18 @@
 import React, { useContext } from "react";
-import "./styles.scss";
+
 import { Title } from "./../../components/Title";
 import { List } from "./../../components/List";
 import { ReviewsCard } from "../../components/ReviewsCard";
-
-import { reviews } from "../../mock/data";
 import { Dots } from "../../components/Dots";
 import { Button } from "../../components/Button";
+
 import { PopupContext } from "../../context/PopupContext";
+
 import { useSlider } from "../../hooks/useSlider";
+
+import { reviews } from "../../mock/data";
+
+import "./styles.scss";
 
 export const Reviews = () => {
   const popupContext = useContext(PopupContext);

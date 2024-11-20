@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Avatar } from "./../Avatar";
-
 import { ReactSVG } from "react-svg";
+
+import { Avatar } from "./../Avatar";
 
 import likeIcon from "../../assets/like.svg";
 

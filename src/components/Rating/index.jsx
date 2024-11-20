@@ -1,8 +1,10 @@
 import React from "react";
-import "./styles.scss";
+
 import { ReactSVG } from "react-svg";
 
 import starIcon from "../../assets/star.svg";
+
+import "./styles.scss";
 
 export const Rating = ({ value }) => {
   return (

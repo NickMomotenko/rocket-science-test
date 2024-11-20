@@ -1,7 +1,8 @@
 import React from "react";
 
-import "./styles.scss";
 import { Avatar } from "../Avatar";
+
+import "./styles.scss";
 
 export const ChatItem = ({ author, me, text, created_at }) => {
   let isMe = author?.id === me?.id;
