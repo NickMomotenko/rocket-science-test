@@ -15,8 +15,6 @@ export const ChatsProvider = ({ children }) => {
     });
 
     setChats(updatedChats);
-
-    console.log(updatedChats);
   };
 
   return (

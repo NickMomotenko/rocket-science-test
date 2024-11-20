@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { ReactSVG } from "react-svg";
 
 import { Avatar } from "../Avatar";
@@ -26,6 +26,14 @@ export const ChatPaper = ({ addMessage, users, data }) => {
 
   let authUserData = users.find((user) => user?.id === authUser?.id);
   let client = users.find((user) => user?.id !== authUser?.id);
+
+  const bodyRef = useRef();
+
+  useEffect(() => {
+    if (bodyRef.current) {
+      bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    }
+  }, [data]);
 
   const handleAddMessage = () => {
     let messageData = {
@@ -63,7 +71,7 @@ export const ChatPaper = ({ addMessage, users, data }) => {
           </div>
         )}
       </div>
-      <div className="chat__body">
+      <div className="chat__body" ref={bodyRef}>
         {data?.map((chat) => {
           return <ChatItem key={chat.id} me={authUserData} {...chat} />;
         })}

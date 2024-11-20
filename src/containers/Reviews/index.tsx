@@ -13,7 +13,14 @@ import { useSlider } from "../../hooks/useSlider";
 export const Reviews = () => {
   const popupContext = useContext(PopupContext);
 
-  const { containerRef, activeIndex, changeIndex } = useSlider();
+  let counter =
+    reviews?.length % 2 === 0
+      ? reviews?.length
+      : Math.round(reviews?.length / 2);
+
+  const { containerRef, activeIndex, changeIndex } = useSlider({
+    sliderCounter: counter,
+  });
 
   return (
     <div className="reviews">
@@ -35,7 +42,7 @@ export const Reviews = () => {
         <div className="reviews__bottom">
           <Button>Все отзывы</Button>
           <Dots
-            counter={reviews?.length}
+            counter={counter}
             activeIndex={activeIndex}
             handler={changeIndex}
           />

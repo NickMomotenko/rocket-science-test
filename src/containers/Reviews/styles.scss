@@ -26,6 +26,12 @@
 
         box-shadow: -10px 0 10px #00000017;
       }
+
+      &.no-shadow {
+        &::after {
+          opacity: 0;
+        }
+      }
     }
 
     .reviews-card {

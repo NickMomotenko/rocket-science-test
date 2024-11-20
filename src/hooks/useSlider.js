@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export const useSlider = () => {
+export const useSlider = ({ sliderCounter }) => {
   const [childWidth, setChildWidth] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -22,6 +22,10 @@ export const useSlider = () => {
 
   useEffect(() => {
     let translateWidth = childWidth * 2 * activeIndex;
+
+    if (--sliderCounter === activeIndex) {
+      containerRef.current.parentNode.classList.add("no-shadow");
+    }else containerRef.current.parentNode.classList.remove("no-shadow");
 
     doTransition(translateWidth);
   }, [activeIndex]);

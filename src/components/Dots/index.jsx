@@ -7,7 +7,7 @@ export const Dots = ({ activeIndex = 0, counter, handler }) => {
     <div className="dots">
       <ul className="dots__list">
         {[
-          ...new Array(counter % 2 === 0 ? counter : Math.round(counter / 2)),
+          ...new Array(counter),
         ].map((_, ind) => {
           let classes =
             activeIndex === ind ? "dots__item active" : "dots__item";
